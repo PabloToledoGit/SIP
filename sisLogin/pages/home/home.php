@@ -4,11 +4,16 @@
 session_start();
 
 function logout() {
+    session_destroy();
     header("Location: ../login/login.php");
     exit;
 }
 
 if (isset($_POST['logout'])) {
+    logout();
+}
+
+if(!isset($_SESSION['email']) || !isset($_SESSION['senha']) ) {
     logout();
 }
 ?>
