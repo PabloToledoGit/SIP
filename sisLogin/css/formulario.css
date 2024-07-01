@@ -1,0 +1,104 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(146, 145, 145));
+    
+}
+.box{
+    color: rgba(0, 0, 0, 0.986);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 255, 255, 0.986);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.a-header{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.a-header:hover{
+    color: rgb(94, 85, 85);
+}
+
+.p-header{
+
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+fieldset{
+    border: 3px solid rgba(0, 0, 0, 0.986);
+}
+legend{
+    border: 1px solid rgb(98, 124, 138);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(98, 124, 138);
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;   
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+#submit{
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#submit:hover{
+    background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
+.header-box{
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 10px;
+}
