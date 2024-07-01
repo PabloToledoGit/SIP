@@ -6,6 +6,7 @@ O Sistema de Inventário de Patrimônios (SIP) é uma aplicação PHP desenvolvi
 
 - **Login de Usuário:** Permite que usuários autorizados acessem o sistema.
 - **Cadastro de Usuário:** Permite o registro de novos usuários com diferentes níveis de acesso.
+- - **Armazenamento de inventário:** Permite o registro de novos itens ao utilizar o CRUD.(AINDA NÃO FUNCIONAL)
 
 ## Estrutura do Projeto
 
