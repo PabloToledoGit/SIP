@@ -38,3 +38,8 @@ Configure as credenciais de acesso ao banco de dados editando o arquivo db/confi
 
 Executando o Projeto
 Acesse o sistema pelo navegador: http://localhost/sisLogin/pages/login/login.php
+![SIP-1](https://github.com/PabloToledoGit/SIP/assets/132606113/8957c533-256b-48b8-9339-07e35499549b)
+![SIP-2](https://github.com/PabloToledoGit/SIP/assets/132606113/91df8f97-9bb6-4c79-8197-bfcc4fe47420)
+![SIP-3](https://github.com/PabloToledoGit/SIP/assets/132606113/cbb46969-43e4-4347-9e31-c21c53c86893)
+
+
