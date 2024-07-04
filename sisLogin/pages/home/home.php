@@ -39,7 +39,7 @@ if(!isset($_SESSION['email']) || !isset($_SESSION['senha']) ) {
                  <img class="header-img" src="../../img/icons8-product-50.png" alt="Logo">
                     <p class="ul-link">|</p>   
                     <a class="ul-link" href="home.php">Home</a>
-                    <a class="ul-link" href="#">Cadastro de Patrimônios</a>
+                    <a class="ul-link" href="../cadastroPatrimonio/cadastroPatrimonio.php">Cadastro de Patrimônios</a>
                     <a class="ul-link" href="#">Patrimônios</a>
                     <a class="ul-link" href="#">Ajuda</a>
                     <p class="ul-link">|</p>
@@ -47,7 +47,7 @@ if(!isset($_SESSION['email']) || !isset($_SESSION['senha']) ) {
                 <div class="div-logout">
                     <form class="form-logout" method="POST" action="home.php">
                         <p class="ul-link">|</p>
-                        <a class="ul-link" href="#">Usuário</a>
+                        <a class="ul-link" href="../usuario/usuario.php">Usuário</a>
                         <button class="form-button-sair" type="submit" name="logout">Sair</button>
                         <p class="ul-link">|</p>
                     </form>
