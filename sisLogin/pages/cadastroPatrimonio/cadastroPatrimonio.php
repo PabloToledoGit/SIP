@@ -1,3 +1,44 @@
+<?php
+include '../db/config.php';
+include '../formulario/formconfig.php';
+
+session_start();
+
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+} else {
+    echo "<script>alert(\"conexão com o banco de dados estabelecida\")</script>";
+}
+
+if (isset($_POST['produto']) && isset($_POST['modelo']) && isset($_POST['iddoproduto']) && isset($_POST['empresa']) && isset($_POST['data']) && isset($_POST['valor']) && isset($_POST['local']) && isset($_POST['condicao']) && isset($_POST['vidautil']) && isset($_POST['depreciacao']) && isset($_POST['numpatrimonio']) && isset($_POST['notafiscal'])) {
+    $produto = $_POST['produto'];
+    $modelo = $_POST['modelo'];
+    $iddoproduto = $_POST['iddoproduto'];
+    $empresa = $_POST['empresa'];
+    $data = $_POST['data'];
+    $valor = $_POST['valor'];
+    $local = $_POST['local'];
+    $condicao = $_POST['condicao'];
+    $vidautil = $_POST['vidautil'];
+    $depreciacao = $_POST['depreciacao'];
+    $numpatrimonio = $_POST['numpatrimonio'];
+    $notafiscal = $_POST['notafiscal'];
+
+    $sql = "INSERT INTO patrimonios (produto, modelo, iddoproduto, empresa, data, valor, local, condicao, vidautil, depreciacao, numpatrimonio, notafiscal) VALUES ('$produto', '$modelo', '$iddoproduto', '$empresa', '$data', '$valor', '$local', '$condicao', '$vidautil', '$depreciacao', '$numpatrimonio', '$notafiscal')";
+
+    $result = $db->query($sql);
+
+    if ($result == TRUE) {
+        echo "Produto cadastrado com sucesso!";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $db->error;
+    }
+
+    $db->close();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -84,16 +125,16 @@
         <h1 class="h1-crud">Cadastro de Patrimônios</h1>
         <form class="form-crud" method="POST" action="cadastroPatrimonio.php">
             <div class="form-group">
-                <label for="nome">Nome do Produto</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
+                <label for="produto">Nome do Produto</label>
+                <input type="text" class="form-control" id="produto" name="produto" required>
             </div>
             <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input type="text" class="form-control" id="descricao" name="descricao" required>
+                <input type="text" class="form-control" id="modelo" name="modelo" required>
             </div>
             <div class="form-group">
-                <label for="id">ID</label>
-                <input type="text" class="form-control" id="id" name="id" required>
+                <label for="iddoproduto">ID</label>
+                <input type="text" class="form-control" id="iddoproduto" name="iddoproduto" required>
             </div>
             <label class="mt-1" for="empresa">Empresa</label>
             <select class="form-select form-select-lg" aria-label="Large select example" name="empresa" id="empresa">
@@ -120,16 +161,16 @@
                 <input type="text" class="form-control" id="condicao" name="condicao" required>
             </div>
             <div class="form-group">
-                <label for="vidault">Vida Util</label>
-                <input type="text" class="form-control" id="vidault" name="vidault" required>
+                <label for="vidautil">Vida Util</label>
+                <input type="number" class="form-control" id="vidautil" name="vidautil" required>
             </div>
             <div class="form-group">
                 <label for="depreciacao">Depreciação</label>
-                <input type="text" class="form-control" id="depreciacao" name="depreciacao" required>
+                <input type="number" class="form-control" id="depreciacao" name="depreciacao" required>
             </div>
             <div class="form-group">
-                <label for="numeropatrimonio">Numero do Patrimônio</label>
-                <input type="text" class="form-control" id="numeropatrimonio" name="numeropatrimonio" required>
+                <label for="numpatrimonio">Numero do Patrimônio</label>
+                <input type="number" class="form-control" id="numpatrimonio" name="numpatrimonio" required>
             </div>
             <div class="form-group">
                 <label for="notafiscal">Nota Fiscal</label>
